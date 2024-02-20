@@ -1,36 +1,36 @@
 import { StatusBar } from 'react-native';
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
-import React, { useState } from 'react';
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+import React from 'react';
 
 function App() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleLogin = () => {
-    if (username === 'seuUsuario' && password === 'suaSenha') {
-      console.log("Login bem-sucedido!");
-    } else {
-      console.log("Credenciais inválidas. Tente novamente.");
-    }
-  };
-
   return (
-    <View style={styles.container}>
-      <View style={styles.border}>
-        <StatusBar barStyle="light-content" />
-        <Text style={styles.text}>Bem-vindo ao App de Login!</Text>
+    <View>
+      <View style={styles.container}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="black"
+        />
+        <Image
+          source={require('./assets/logo-senai.png')}
+          style={styles.logo}
+        />
+        <Text style={styles.text}>Bem Vindo(a)</Text>
+      </View>
+      <View style={styles.cadastro}>
+      <Text>Email:</Text>
         <TextInput
           style={styles.input}
-          placeholder="Usuário"
-          onChangeText={(text) => setUsername(text)}
+          placeholder="Digite seu email"
         />
+        <Text>Senha:</Text>
         <TextInput
           style={styles.input}
-          placeholder="Senha"
-          secureTextEntry={true}
-          onChangeText={(text) => setPassword(text)}
+          placeholder="Digite sua senha"
+          secureTextEntry
         />
-        <Button title="Login" onPress={handleLogin} />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Acessar</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -38,32 +38,46 @@ function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-  },
-  text: {
-    color: 'black',
-    marginBottom: 20,
-    fontSize: 18,
-  },
-  border: {
-    borderWidth: 1,
-    borderColor: 'black',
-    padding: 20,
-    borderRadius: 10,
     backgroundColor: 'red',
-    width: 300,
+    alignItems: 'center',
+    color: 'white',
+
   },
-  input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 10,
+
+  cadastro : {
+    margin: 20,
+    padding: 20,
+  },
+
+  logo: {
+    marginTop: 65,
+    width: 200,
+    height: 51,
+  },
+
+  input :{
+    borderBottomWidth: 1,
     padding: 10,
-    backgroundColor: 'white',
+    marginBottom: 10,
+  },
+
+  text : {
+    color: 'white',
+    marginBottom: 40,
+    marginTop: 10,
+    fontSize: 20,
+  },
+
+  button: {
+    backgroundColor: 'black',
+    padding: 10,
     borderRadius: 5,
+    marginTop: 10,
+  },
+
+  buttonText: {
+    color: 'white',
+    textAlign: 'center',
   },
 });
 
