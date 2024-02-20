@@ -1,8 +1,12 @@
-import { StatusBar } from 'react-native';
+import { Alert, StatusBar } from 'react-native';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import React from 'react';
 
 function App() {
+  const link = () => {
+    Alert.alert('Página indisponivel!', 'Ainda em desenvolvimento, aguarde...',[{text: 'OK'}]);
+  };
+
   return (
     <View>
       <View style={styles.container}>
@@ -20,17 +24,23 @@ function App() {
       <Text style={styles.input}>Email:</Text>
         <TextInput
           style={styles.input}
-          placeholder="Digite seu email"
+          placeholder="Digite seu email:"
+          placeholderTextColor="#575757"
         />
         <Text style={styles.input}>Senha:</Text>
         <TextInput
           style={styles.input}
-          placeholder="Digite sua senha"
+          placeholder="Digite sua senha:"
+          placeholderTextColor="#575757"
           secureTextEntry
         />
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
+        <Text style={styles.linkText} onPress={link}>
+          Não possui conta? Cadastre-se
+        </Text>
+        
       </View>
     </View>
   );
@@ -46,14 +56,14 @@ const styles = StyleSheet.create({
 
   
   logo: {
-    marginTop: 65,
+    marginTop: 70,
     width: 200,
     height: 51,
   },
 
   text : {
     color: 'white',
-    marginBottom: 40,
+    marginBottom: 31,
     marginTop: 10,
     fontSize: 20,
   },
@@ -65,7 +75,9 @@ const styles = StyleSheet.create({
   },
 
   input :{
+    fontSize: 16,
     margin: 15,
+    marginLeft: 0,
     borderBottomWidth: 1,
     padding: 5,
     marginBottom: 10,
@@ -82,6 +94,13 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     textAlign: 'center',
+    fontSize: 20,
+  },
+
+  linkText: {
+    color: 'blue',
+    marginTop: 10,
+    textDecorationLine: 'none',
   },
 });
 
