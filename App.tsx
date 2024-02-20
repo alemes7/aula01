@@ -1,6 +1,7 @@
 import { Alert, StatusBar } from 'react-native';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import React from 'react';
+import { FontAwesome, FontAwesome5 } from '@expo/vector-icons';
 
 function App() {
   const link = () => {
@@ -40,6 +41,14 @@ function App() {
         <Text style={styles.linkText} onPress={link}>
           Não possui conta? Cadastre-se
         </Text>
+        <View style={styles.iconContainer}>
+          <TouchableOpacity style={styles.iconButton} onPress={() => console.log('Login com Google')}>
+            <FontAwesome name="google" size={30} color="black" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.iconButton} onPress={() => console.log('Login com Facebook')}>
+            <FontAwesome5 name="facebook" size={30} color="black" />
+          </TouchableOpacity>
+        </View>
         
       </View>
     </View>
@@ -78,6 +87,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     margin: 15,
     marginLeft: 0,
+    marginRight: 0,
     borderBottomWidth: 1,
     padding: 5,
     marginBottom: 10,
@@ -101,6 +111,18 @@ const styles = StyleSheet.create({
     color: 'blue',
     marginTop: 10,
     textDecorationLine: 'none',
+  },
+
+  iconContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 40,
+    gap: 5,
+  },
+
+  iconButton: {
+    padding: 10,
+    alignItems: 'center',
   },
 });
 
