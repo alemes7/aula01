@@ -17,12 +17,12 @@ function App() {
         <Text style={styles.text}>Bem Vindo(a)</Text>
       </View>
       <View style={styles.cadastro}>
-      <Text>Email:</Text>
+      <Text style={styles.input}>Email:</Text>
         <TextInput
           style={styles.input}
           placeholder="Digite seu email"
         />
-        <Text>Senha:</Text>
+        <Text style={styles.input}>Senha:</Text>
         <TextInput
           style={styles.input}
           placeholder="Digite sua senha"
@@ -44,21 +44,11 @@ const styles = StyleSheet.create({
 
   },
 
-  cadastro : {
-    margin: 20,
-    padding: 20,
-  },
-
+  
   logo: {
     marginTop: 65,
     width: 200,
     height: 51,
-  },
-
-  input :{
-    borderBottomWidth: 1,
-    padding: 10,
-    marginBottom: 10,
   },
 
   text : {
@@ -67,6 +57,20 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 20,
   },
+
+  cadastro : {
+    margin:20,
+    marginBottom: 0,
+    fontSize: 16,
+  },
+
+  input :{
+    margin: 15,
+    borderBottomWidth: 1,
+    padding: 5,
+    marginBottom: 10,
+  },
+
 
   button: {
     backgroundColor: 'black',
