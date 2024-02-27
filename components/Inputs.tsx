@@ -15,18 +15,18 @@ function Inputs({text, placeholder}) {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
+    margin: 18,
   },
   label: {
-    marginBottom: 10,
-    fontSize: 18,
+    marginBottom: 5,
+    fontSize: 16,
   },
   input: {
-    borderColor: '#F39200',
+    borderColor: '#F5F5F5',
     borderWidth: 1,
-    padding: 12,
+    padding: 10,
     borderRadius: 5,
-    marginTop: 10,
+    marginTop: 5,
     backgroundColor: '#F5F5F5',
   },
 });

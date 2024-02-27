@@ -9,12 +9,12 @@ function Cadastro() {
     return (
         <View style={styles.container}>
             <Header text="Cadastre-se" backgroundColor="#FF0000" />
-            <Inputs text="Email:" placeholder="Insira seu email:"/>
-            <Inputs text="Email:" placeholder="Insira seu email:"/>
-            <Inputs text="Email:" placeholder="Insira seu email:"/>
-            <Inputs text="Email:" placeholder="Insira seu email:"/>
-            <Inputs text="Email:" placeholder="Insira seu email:"/>
-            <Inputs text="Email:" placeholder="Insira seu email:"/>
+            <Inputs text="Nome:" placeholder="Insira seu nome:"/>
+            <Inputs text="Sobrenome:" placeholder="Insira seu sobrenome:"/>
+            <Inputs text="E-mail:" placeholder="Insira seu email:"/>
+            <Inputs text="Telefone:" placeholder="Insira seu telefone:"/>
+            <Inputs text="Senha:" placeholder="Insira sua senha:"/>
+            <Inputs text="Confirmar senha:" placeholder="Insira sua senha:"/>
             <Botao text="Cadastre-se"/>
         </View>
     );
