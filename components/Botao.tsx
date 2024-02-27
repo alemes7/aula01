@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-function Botao() {
+function Botao({text}) {
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>Acessar</Text>
+                <Text style={styles.buttonText}>{text}</Text>
             </TouchableOpacity>
         </View>
     );
@@ -19,9 +19,9 @@ const styles = StyleSheet.create({
 
     button: {
         backgroundColor: 'black',
-        paddingVertical: 10,
-        paddingHorizontal: 20,
+        padding: 12,
         borderRadius: 5,
+        width: '90%',
     },
 
     buttonText: {

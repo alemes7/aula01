@@ -1,15 +1,21 @@
 import React from 'react';
 import { Alert, StatusBar } from 'react-native';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
-import { FontAwesome, FontAwesome5 } from '@expo/vector-icons';
 
-function Header() {
+
+function Header({backgroundColor, text}) {
   return (
     <View>
-      <StatusBar barStyle="light-content" backgroundColor="black" />
-      <View style={styles.container}>
-        <Image source={require('./assets/logo.png')} />
-        <Text style={styles.text}>Bem Vindo(a)</Text>
+      <View style={{...styles.container, backgroundColor: backgroundColor }}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="black"
+        />
+        <Image
+          source={require('../assets/logo-senai.png')}
+          style={styles.logo}
+        />
+        <Text style={styles.text}>{text}</Text>
       </View>
     </View>
   );
@@ -18,7 +24,6 @@ function Header() {
 const styles = StyleSheet.create({
 
     container: {
-        backgroundColor: 'red',
         alignItems: 'center',
         color: 'white',
     
@@ -32,6 +37,7 @@ const styles = StyleSheet.create({
       },
 
       logo : {
+        marginTop: 70,
         width: 200,
         height: 51,
       },

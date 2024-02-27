@@ -1,16 +1,13 @@
-// App.tsx
 import React from 'react';
 import RecSenha from './screens/RecSenha';
+import Login from './screens/Login';
+import Cadastro from './screens/Cadastro';
+
+
 
 function App() {
-    // Lógica principal do seu aplicativo, roteamento, etc.
     return (
-        // Renderize os componentes principais aqui, por exemplo:
-        <RecSenha />
-        // ou
-        // <Cadastro />
-        // ou
-        // <Login />
+        <Cadastro />
     );
 }
 
