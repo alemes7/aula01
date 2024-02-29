@@ -1,9 +1,13 @@
 import React from 'react';
-import { Alert, StatusBar } from 'react-native';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+import { StatusBar } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
+type HeaderProps = {
+  backgroundColor: string;
+  text: string;
+}
 
-function Header({backgroundColor, text}) {
+function Header({backgroundColor, text} : HeaderProps) {
   return (
     <View>
       <View style={{...styles.container, backgroundColor: backgroundColor }}>

@@ -6,7 +6,7 @@ import Loading from './screens/Loading';
 
 function App() {
     return (
-        <Loading />
+        <RecSenha />
     );
 }
 

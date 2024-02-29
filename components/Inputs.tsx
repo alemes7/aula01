@@ -1,7 +1,12 @@
 import React from 'react';
 import { View, TextInput, StyleSheet, Text } from 'react-native';
 
-function Inputs({text, placeholder}) {
+type InputsProps = {
+  text: string;
+  placeholder: string;
+}
+
+function Inputs({text, placeholder} : InputsProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{text}</Text>
