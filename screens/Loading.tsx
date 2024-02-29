@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, ActivityIndicator, Image } from 'react-native';
 
-function Carregamento() {
+function Loading() {
   return (
     <View style={styles.container}>
       <View style={styles.background}>
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Carregamento;
+export default Loading;
