@@ -3,10 +3,11 @@ import RecSenha from './screens/RecSenha';
 import Login from './screens/Login';
 import Cadastro from './screens/Cadastro';
 import Loading from './screens/Loading';
+import Inventarios from './screens/Inventarios';
 
 function App() {
     return (
-        <RecSenha />
+        <Inventarios />
     );
 }
 
