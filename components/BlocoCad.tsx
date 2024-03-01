@@ -5,7 +5,7 @@ type BlocoProps = {
     text: string;
 };
 
-function Bloco({ text }: BlocoProps) {
+function BlocoCad({ text }: BlocoProps) {
     return (
         <View style={[styles.container]}>
             <Text style={styles.numero}>956389</Text>
@@ -38,4 +38,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Bloco;
+export default BlocoCad;
