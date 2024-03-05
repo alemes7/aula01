@@ -13,8 +13,8 @@ function Cadastro() {
             <Inputs text="Sobrenome:" placeholder="Insira seu sobrenome:"/>
             <Inputs text="E-mail:" placeholder="Insira seu email:"/>
             <Inputs text="Telefone:" placeholder="Insira seu telefone:"/>
-            <Inputs text="Senha:" placeholder="Insira sua senha:"/>
-            <Inputs text="Confirmar senha:" placeholder="Insira sua senha:"/>
+            <Inputs text="Senha:" placeholder="Insira sua senha:" secureTextEntry/>
+            <Inputs text="Confirmar senha:" placeholder="Insira sua senha:" secureTextEntry/>
             <Botao text="Cadastre-se"/>
         </View>
     );

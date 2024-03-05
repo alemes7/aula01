@@ -1,18 +1,17 @@
 import React from 'react';
-import { View, TextInput, StyleSheet, Text } from 'react-native';
+import { View, TextInput, StyleSheet, Text, TextInputProps } from 'react-native';
 
-type InputsProps = {
+interface InputsProps extends TextInputProps {
   text: string;
-  placeholder: string;
 }
 
-function Inputs({text, placeholder} : InputsProps) {
+const Inputs: React.FC<InputsProps> = ({ text, ...inputProps }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{text}</Text>
       <TextInput
         style={styles.input}
-        placeholder={placeholder}
+        {...inputProps}
       />
     </View>
   );

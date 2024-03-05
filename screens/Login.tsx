@@ -10,7 +10,7 @@ function Login() {
       <Header text="Login" backgroundColor="#000000" />
       <Text style={styles.text}>Faça Login para Acessar o Sistema!</Text>
       <Inputs text="Email:" placeholder="Insira seu email:" />
-      <Inputs text="Senha:" placeholder="Insira sua senha:" />
+      <Inputs text="Senha:" placeholder="Insira sua senha:" secureTextEntry/>
       <Botao text="Cadastre-se" />
       <View style={styles.buttonContainer}>
         <TouchableOpacity>
