@@ -1,18 +1,15 @@
 import React from 'react';
 import { View, TextInput, StyleSheet, Text, TextInputProps } from 'react-native';
 
-interface InputsProps extends TextInputProps {
+interface InputsProps extends TextInputProps{
   text: string;
 }
 
-const Inputs: React.FC<InputsProps> = ({ text, ...inputProps }) => {
+function Inputs({text, ...props} : InputsProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{text}</Text>
-      <TextInput
-        style={styles.input}
-        {...inputProps}
-      />
+      <TextInput {...props} style={styles.input} placeholderTextColor="#808080" />
     </View>
   );
 }

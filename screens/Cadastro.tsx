@@ -4,7 +4,6 @@ import Header from '../components/Header';
 import Botao from '../components/Botao';
 import Inputs from '../components/Inputs';
 
-
 function Cadastro() {
     return (
         <View style={styles.container}>
