@@ -36,7 +36,7 @@ function Inventarios() {
             <View style={styles.addButtonContainer}>
                     <AntDesign name="pluscircle" size={50} color="#FF0000" onPress={Adicionar} />
             </View>
-            <BottomNav backgroundColor='#FF0000' iconColor='white'/>
+            <BottomNav backgroundColor='#FF0000' iconColor='white' border={false}/>
         </>
     );
 }

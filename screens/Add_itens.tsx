@@ -57,7 +57,7 @@ function Add_itens() {
           </View>
 
         </View> 
-        <BottomNav backgroundColor='#FFF' iconColor='#595959'/>
+        <BottomNav backgroundColor='#FFF' iconColor='#595959' border={true}/>
       </View>
     </>
   );

@@ -1,22 +1,18 @@
 import React from 'react';
-import { View, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
-import { Octicons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
 
 type BottomNavProps = {
     backgroundColor: string;
-    iconColor: string; // Adicione a propriedade para a cor dos ícones
+    iconColor: string;
+    border: boolean;
+    // lembrar de arrumar a border
 }
 
-function BottomNav({ backgroundColor, iconColor }: BottomNavProps) {
-    const Adicionar = () => {
-        alert("Adicionar");
-    };
-
+function BottomNav({ backgroundColor, iconColor, border }: BottomNavProps) {
     return (
         <>
-            <View style={{ ...styles.container, backgroundColor: backgroundColor }}>
+            <View style={{ ...styles.container, backgroundColor: backgroundColor, borderBottomWidth: border ? 1 : 0 }}>
                 <View style={styles.display}>
                     <FontAwesome6 name="camera-rotate" size={30} color={iconColor} />
                     <FontAwesome5 name="list-ol" size={30} color={iconColor} />
@@ -37,6 +33,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 30,
         paddingBottom: 10,
+        borderBottomColor: '#CBCBCB',
     },
     display: {
         position: 'absolute',
