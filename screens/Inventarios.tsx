@@ -1,7 +1,6 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { View, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
-import { FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
+import { View,  ScrollView, StyleSheet } from 'react-native';
+import { FontAwesome5 } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import Navbar from '../components/Navbar';
@@ -39,8 +38,7 @@ function Inventarios() {
     return (
         <>
             <Navbar icon1={<Octicons name="three-bars" size={24} color="black" />} icon2={<FontAwesome5 name="search" size={24} color="black" />} text="Lista" backgroundColor='white' colorText='#595959'/>
-            <ScrollView stickyHeaderIndices={[0]}>
-                <StatusBar backgroundColor="black" />
+            <ScrollView>
                 <BlocoCad text='CADEIRA SENAI' />
                 <BlocoCad text='CADEIRA SENAI' />
                 <BlocoCad text='CADEIRA SENAI' />

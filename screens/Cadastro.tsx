@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Header from '../components/Header';
 import Botao from '../components/Botao';
 import Inputs from '../components/Inputs';
@@ -19,7 +19,7 @@ function Cadastro() {
             width: 240,
           },
     });  
-    
+
     return (
         <View style={styles.container}>
             <Header text="Cadastre-se" backgroundColor="#FF0000" />
