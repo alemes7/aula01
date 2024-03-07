@@ -5,6 +5,40 @@ import Navbar from '../components/Navbar';
 import BottomNav from '../components/BottomNav';
 
 function Add_itens() {
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    formContainer: {
+      paddingHorizontal: 20,
+      marginTop: 30,
+      
+    },
+    inputContainer: {
+      position: 'relative',
+      marginTop: 30,
+    },
+    label: {
+      position: 'absolute',
+      backgroundColor: 'white',
+      paddingHorizontal: 8,
+      top: -6,
+      left: 12,
+      zIndex: 1,
+      fontSize: 12,
+      maxWidth: 110,
+  
+    },
+    input: {
+      height: 40,
+      borderRadius: 5,
+      borderColor: 'gray',
+      borderWidth: 1,
+      paddingLeft: 35,
+    },
+  });
+
+  
   return (
     <>
       <View style={styles.container}>
@@ -62,38 +96,5 @@ function Add_itens() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  formContainer: {
-    paddingHorizontal: 20,
-    marginTop: 30,
-    
-  },
-  inputContainer: {
-    position: 'relative',
-    marginTop: 30,
-  },
-  label: {
-    position: 'absolute',
-    backgroundColor: 'white',
-    paddingHorizontal: 8,
-    top: -6,
-    left: 12,
-    zIndex: 1,
-    fontSize: 12,
-    maxWidth: 110,
-
-  },
-  input: {
-    height: 40,
-    borderRadius: 5,
-    borderColor: 'gray',
-    borderWidth: 1,
-    paddingLeft: 35,
-  },
-});
 
 export default Add_itens;

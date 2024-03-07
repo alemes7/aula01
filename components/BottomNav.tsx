@@ -10,6 +10,40 @@ type BottomNavProps = {
 }
 
 function BottomNav({ backgroundColor, iconColor, border }: BottomNavProps) {
+    const styles = StyleSheet.create({
+        container: {
+            position: 'absolute',
+            bottom: 0,
+            width: "100%",
+            height: 70,
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 30,
+            paddingBottom: 10,
+            borderBottomColor: '#CBCBCB',
+        },
+        display: {
+            position: 'absolute',
+            bottom: 0,
+            width: "100%",
+            height: 70,
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 30,
+            paddingBottom: 10,
+        },
+        addButtonContainer: {
+            position: "absolute",
+            bottom: 20,
+            right: 0,
+            margin: 20,
+            marginBottom: 50,
+            height: 60,
+        },
+    });
+
     return (
         <>
             <View style={{ ...styles.container, backgroundColor: backgroundColor, borderBottomWidth: border ? 1 : 0 }}>
@@ -21,39 +55,5 @@ function BottomNav({ backgroundColor, iconColor, border }: BottomNavProps) {
         </>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        position: 'absolute',
-        bottom: 0,
-        width: "100%",
-        height: 70,
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 30,
-        paddingBottom: 10,
-        borderBottomColor: '#CBCBCB',
-    },
-    display: {
-        position: 'absolute',
-        bottom: 0,
-        width: "100%",
-        height: 70,
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 30,
-        paddingBottom: 10,
-    },
-    addButtonContainer: {
-        position: "absolute",
-        bottom: 20,
-        right: 0,
-        margin: 20,
-        marginBottom: 50,
-        height: 60,
-    },
-});
 
 export default BottomNav;

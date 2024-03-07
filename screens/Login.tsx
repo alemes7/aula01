@@ -5,6 +5,31 @@ import Botao from '../components/Botao';
 import Inputs from '../components/Inputs';
 
 function Login() {
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    text: {
+      marginBottom: 15,
+      marginTop: 40,
+      fontSize: 18,
+      alignSelf: 'center',
+      textAlign: 'center',
+      width: 320,
+    },
+    buttonContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginTop: 10,
+      marginHorizontal: 20,
+    },
+  
+    button: {
+      color: '#011E83',
+      fontSize: 14,
+    }
+  });
+  
   return (
     <View style={styles.container}>
       <Header text="Login" backgroundColor="#000000" />
@@ -23,30 +48,5 @@ function Login() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  text: {
-    marginBottom: 15,
-    marginTop: 40,
-    fontSize: 18,
-    alignSelf: 'center',
-    textAlign: 'center',
-    width: 320,
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 10,
-    marginHorizontal: 20,
-  },
-
-  button: {
-    color: '#011E83',
-    fontSize: 14,
-  }
-});
 
 export default Login;

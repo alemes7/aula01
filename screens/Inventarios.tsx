@@ -13,6 +13,29 @@ function Adicionar() {
 }
 
 function Inventarios() {
+    const styles = StyleSheet.create({
+        display: {
+            position: 'absolute',
+            bottom: 0,
+            width: "100%",
+            height: 70,
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "#ff0000",
+            gap: 30,
+            paddingBottom: 10,
+        },
+        addButtonContainer: {
+            position: "absolute",
+            bottom: 20,
+            right: 0,
+            margin: 20,
+            marginBottom: 50,
+            height: 60,
+        },
+    });
+    
     return (
         <>
             <Navbar icon1={<Octicons name="three-bars" size={24} color="black" />} icon2={<FontAwesome5 name="search" size={24} color="black" />} text="Lista" backgroundColor='white' colorText='#595959'/>
@@ -41,27 +64,5 @@ function Inventarios() {
     );
 }
 
-const styles = StyleSheet.create({
-    display: {
-        position: 'absolute',
-        bottom: 0,
-        width: "100%",
-        height: 70,
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#ff0000",
-        gap: 30,
-        paddingBottom: 10,
-    },
-    addButtonContainer: {
-        position: "absolute",
-        bottom: 20,
-        right: 0,
-        margin: 20,
-        marginBottom: 50,
-        height: 60,
-    },
-});
 
 export default Inventarios;

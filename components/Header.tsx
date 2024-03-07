@@ -8,24 +8,7 @@ type HeaderProps = {
 }
 
 function Header({backgroundColor, text} : HeaderProps) {
-  return (
-    <View>
-      <View style={{...styles.container, backgroundColor: backgroundColor }}>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor="black"
-        />
-        <Image
-          source={require('../assets/logo-senai.png')}
-          style={styles.logo}
-        />
-        <Text style={styles.text}>{text}</Text>
-      </View>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
+  const styles = StyleSheet.create({
 
     container: {
         alignItems: 'center',
@@ -47,5 +30,23 @@ const styles = StyleSheet.create({
       },
     
   });
+  
+  return (
+    <View>
+      <View style={{...styles.container, backgroundColor: backgroundColor }}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="black"
+        />
+        <Image
+          source={require('../assets/logo-senai.png')}
+          style={styles.logo}
+        />
+        <Text style={styles.text}>{text}</Text>
+      </View>
+    </View>
+  );
+}
+
 
 export default Header;

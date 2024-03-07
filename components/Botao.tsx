@@ -6,6 +6,26 @@ type ButtonProps = {
 }
 
 function Botao({text} : ButtonProps) {
+    const styles = StyleSheet.create({
+        container: {
+            alignItems: 'center',
+            marginTop: 20,
+        },
+    
+        button: {
+            backgroundColor: 'black',
+            padding: 10,
+            borderRadius: 5,
+            width: '90%',
+        },
+    
+        buttonText: {
+            color: 'white',
+            textAlign: 'center',
+            fontSize: 18,
+        },
+    });
+    
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.button}>
@@ -15,24 +35,5 @@ function Botao({text} : ButtonProps) {
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        marginTop: 20,
-    },
-
-    button: {
-        backgroundColor: 'black',
-        padding: 10,
-        borderRadius: 5,
-        width: '90%',
-    },
-
-    buttonText: {
-        color: 'white',
-        textAlign: 'center',
-        fontSize: 18,
-    },
-});
 
 export default Botao;

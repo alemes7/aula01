@@ -6,6 +6,21 @@ import Inputs from '../components/Inputs';
 
 
 function RecSenha() {
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+        },
+        
+        text : {
+            marginBottom: 15,
+            marginTop: 40,
+            fontSize: 18,
+            alignSelf: 'center',
+            textAlign: 'center',
+            width: 240,
+          },
+    });
+    
     return (
         <View style={styles.container}>
             <Header text="Recuperação de senha" backgroundColor="#011E83" />
@@ -15,20 +30,5 @@ function RecSenha() {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    
-    text : {
-        marginBottom: 15,
-        marginTop: 40,
-        fontSize: 18,
-        alignSelf: 'center',
-        textAlign: 'center',
-        width: 240,
-      },
-});  
 
 export default RecSenha;
