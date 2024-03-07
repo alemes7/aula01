@@ -23,14 +23,14 @@ function Add_itens() {
         backgroundColor='#FF0000'
       />
       <View style={{ marginTop: 30 }} />
-      <InputLabel text="Nº Inventário *" />
-      <InputLabel text="Descrição *" />
-      <InputLabel text="Local *" />
-      <InputLabel text="Responsável *" />
-      <InputLabel text="Data de Registro *" />
+      <InputLabel text="Nº Inventário" />
+      <InputLabel text="Descrição" />
+      <InputLabel text="Local" />
+      <InputLabel text="Responsável" />
+      <InputLabel text="Data de Registro" />
 
 
-      <BottomNav backgroundColor='#FFF' iconColor='#595959' border={true} />
+      <BottomNav backgroundColor='#FFF' iconColor='#595959' border={1} />
     </View>
   );
 }

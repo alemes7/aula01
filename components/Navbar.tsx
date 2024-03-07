@@ -37,7 +37,7 @@ function Navbar ({icon1, icon2,text, backgroundColor, colorText} :NavbarProps) {
 
     return (
         <SafeAreaView style={{...styles.container, backgroundColor: backgroundColor}}>
-            <StatusBar backgroundColor="red"/>
+            <StatusBar backgroundColor="dark"/>
             <View style={styles.icon}>{icon1}</View>
             <Text style={{...styles.text, color: colorText}}>{text}</Text>
             <View style={styles.icon}>{icon2}</View>
