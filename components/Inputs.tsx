@@ -29,7 +29,10 @@ function Inputs({text, ...props} : InputsProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{text}</Text>
-      <TextInput {...props} style={styles.input} placeholderTextColor="#808080" />
+      <TextInput {...props} style={styles.input} onFocus={() =>{
+        setHover("#F39200")}} 
+        onBlur={() =>{
+        setHover("#F5F5F5")}} />
     </View>
   );
 }
