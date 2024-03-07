@@ -8,7 +8,7 @@ import Add_itens from './screens/Add_itens';
 
 function App() {
     return (
-        <Cadastro />
+        <Add_itens />
     );
 }
 

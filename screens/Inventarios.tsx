@@ -35,7 +35,7 @@ function Inventarios() {
             height: 60,
         },
     });
-    
+
     return (
         <>
             <Navbar icon1={<Octicons name="three-bars" size={24} color="black" />} icon2={<FontAwesome5 name="search" size={24} color="black" />} text="Lista" backgroundColor='white' colorText='#595959'/>
