@@ -7,10 +7,11 @@ import Inventarios from './screens/Inventarios';
 import Add_itens from './screens/Add_itens';
 import Desc_itens from './screens/Desc_itens';
 import Scanner from './screens/Scanner';
+import Editar from './screens/Editar';
 
 function App() {
     return (
-        <Scanner />
+        <Editar />
     );
 }
 
