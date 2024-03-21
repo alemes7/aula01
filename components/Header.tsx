@@ -34,10 +34,6 @@ function Header({backgroundColor, text} : HeaderProps) {
   return (
     <View>
       <View style={{...styles.container, backgroundColor: backgroundColor }}>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor="black"
-        />
         <Image
           source={require('../assets/logo-senai.png')}
           style={styles.logo}
