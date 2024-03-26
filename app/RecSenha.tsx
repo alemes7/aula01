@@ -3,6 +3,7 @@ import { View, StyleSheet, Text } from 'react-native';
 import Header from '../components/Header';
 import Botao from '../components/Botao';
 import Inputs from '../components/Inputs';
+import LinkBtn from '../components/Botao';
 
 
 function RecSenha() {
@@ -26,7 +27,7 @@ function RecSenha() {
             <Header text="Recuperação de senha" backgroundColor="#011E83" />
             <Text style={styles.text}>Insira seu Email para recuperar a senha!</Text>
             <Inputs text="Email:" placeholder="Insira seu email:"/>
-            <Botao text="Cadastre-se"/>
+            <LinkBtn text="Cadastre-se" href="./app/index.tsx"/>
         </View>
     );
 }

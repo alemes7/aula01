@@ -1,11 +1,13 @@
-import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Link } from "expo-router"
+import { LinkProps } from "next/link"
+import { Text,TouchableOpacity,StyleSheet, View } from "react-native"
 
-type ButtonProps = {
-    text: string;
+
+interface LinkBtnProps extends LinkProps{
+    text: string
 }
 
-function Botao({text} : ButtonProps) {
+export default function LinkBtn({text, ...props}: LinkBtnProps){
     const styles = StyleSheet.create({
         container: {
             alignItems: 'center',
@@ -25,15 +27,13 @@ function Botao({text} : ButtonProps) {
             fontSize: 18,
         },
     });
-    
+
     return (
-        <View style={styles.container}>
+        <Link href="#" style={styles.container}>
             <TouchableOpacity style={styles.button}>
                 <Text style={styles.buttonText}>{text}</Text>
             </TouchableOpacity>
-        </View>
+        </Link>
     );
 }
 
-
-export default Botao;

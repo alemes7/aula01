@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-import Navbar from '../components/Navbar';
+import Navbar from '../../../components/Navbar';
 import { MaterialIcons } from '@expo/vector-icons';
-import BottomNav from '../components/BottomNav';
+import BottomNav from '../../../components/BottomNav';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'react-native';
 
@@ -30,7 +30,7 @@ function Scanner() {
                 backgroundColor='#FF0000'
             />
             <View style={styles.container}>
-                <Image source={require('../assets/scanner.png')} style={styles.img}/>
+                <Image source={require('../../../assets/scanner.png')} style={styles.img}/>
             </View>
             <BottomNav backgroundColor='#FFF' iconColor='#595959' border={1} />
         </>

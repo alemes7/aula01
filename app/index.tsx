@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Botao from '../components/Botao';
 import Inputs from '../components/Inputs';
 import { Link } from 'expo-router';
+import LinkBtn from '../components/Botao';
 
 function Login() {
   const styles = StyleSheet.create({
@@ -40,9 +41,7 @@ function Login() {
         <Text style={styles.text}>Faça Login para Acessar o Sistema!</Text>
         <Inputs text="Email:" placeholder="Insira seu email:" />
         <Inputs text="Senha:" placeholder="Insira sua senha:" secureTextEntry/>
-        <Link href="/Inventarios" asChild>
-          <Botao text="Entrar" />
-        </Link>
+        <LinkBtn text="Entrar" href="drawer"></LinkBtn>
         <View style={styles.buttonContainer}>
           <Link href="/Cadastro" asChild>
             <TouchableOpacity>
