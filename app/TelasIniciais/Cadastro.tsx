@@ -32,7 +32,7 @@ function Cadastro() {
                 <Inputs text="Telefone:" placeholder="Insira seu telefone:"/>
                 <Inputs text="Senha:" placeholder="Insira sua senha:" secureTextEntry/>
                 <Inputs text="Confirmar senha:" placeholder="Insira sua senha:" secureTextEntry/>
-                <Botao text="Cadastre-se"/>
+                <Botao href={} text="Cadastre-se"/>
             </ScrollView>
         </>
     );
