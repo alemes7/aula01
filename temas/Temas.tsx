@@ -1,28 +1,33 @@
-import { useColorScheme } from "react-native" 
+import { useColorScheme } from 'react-native'
 
-interface Cores {
 
+interface cores {
     bgPrimary: string
     bgSecondary: string
-    bgInfo?: string
+    bginfo?: string
+    textColorPrimary: string
+    textColorSecondary: string
 }
 
 
-const light: Cores = {
-    bgPrimary: "#FFFFFF",
-    bgSecondary: "#FF0000",
-    bgInfo: "#011E83",
-}
-const dark: Cores = {
-    bgPrimary: "#240707",
-    bgSecondary: "#FF0000",
+const light: cores = {
+    bgPrimary: '#ffffff',
+    bgSecondary: '#FF0000',
+    bginfo: '#011E83',
+    textColorPrimary: '#000000',
+    textColorSecondary: '#ffffff'
 }
 
-export function useColor() {
-    const colorScheme = useColorScheme()
-    if (colorScheme === 'dark') {
-        return dark
-    }else {
-        return light
-    }
+const dark: cores = {
+    bgPrimary: '#240707',
+    bgSecondary: '#FF0000',
+    textColorPrimary: '#ffffff',
+    textColorSecondary: '#D9D9D9'
+}
+
+
+export function useColor(){
+    const ColorScheme = useColorScheme()
+    if (ColorScheme ==  'dark') { return dark } 
+    else { return light }
 }

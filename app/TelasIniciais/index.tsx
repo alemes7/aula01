@@ -40,7 +40,7 @@ function Login() {
     <>
       <StatusBar style="dark" backgroundColor='#FF' />
       <View style={styles.container}>
-        <Header text="Login" Color={cores.bgPrimary} />
+        <Header text="Login" color={cores.bgPrimary} />
         <Text style={styles.text}>Faça Login para Acessar o Sistema!</Text>
         <Inputs text="Email:" placeholder="Insira seu email:" />
         <Inputs text="Senha:" placeholder="Insira sua senha:" secureTextEntry/>
