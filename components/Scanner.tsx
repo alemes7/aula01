@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-import Navbar from '../../../components/Navbar';
+import Navbar from './Navbar';
 import { MaterialIcons } from '@expo/vector-icons';
-import BottomNav from '../../../components/BottomNav';
+import BottomNav from './BottomNav';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'react-native';
 

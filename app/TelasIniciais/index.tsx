@@ -1,11 +1,14 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import Header from '../components/Header';
-import Botao from '../components/Botao';
-import Inputs from '../components/Inputs';
+import Header from '../../components/Header';
+import Botao from '../../components/Botao';
+import Inputs from '../../components/Inputs';
 import { Link } from 'expo-router';
-import LinkBtn from '../components/Botao';
+import LinkBtn from '../../components/Botao';
+import { useColor } from '../../temas/Temas';
+
+const cores = useColor();
 
 function Login() {
   const styles = StyleSheet.create({
@@ -37,7 +40,7 @@ function Login() {
     <>
       <StatusBar style="dark" backgroundColor='#FF' />
       <View style={styles.container}>
-        <Header text="Login" backgroundColor="#000000" />
+        <Header text="Login" Color={cores.bgPrimary} />
         <Text style={styles.text}>Faça Login para Acessar o Sistema!</Text>
         <Inputs text="Email:" placeholder="Insira seu email:" />
         <Inputs text="Senha:" placeholder="Insira sua senha:" secureTextEntry/>

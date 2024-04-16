@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import Header from '../components/Header';
-import Botao from '../components/Botao';
-import Inputs from '../components/Inputs';
-import LinkBtn from '../components/Botao';
+import Header from '../../components/Header';
+import Botao from '../../components/Botao';
+import Inputs from '../../components/Inputs';
+import LinkBtn from '../../components/Botao';
 
 
 function RecSenha() {

@@ -29,7 +29,7 @@ export default function LinkBtn({text, ...props}: LinkBtnProps){
     });
 
     return (
-        <Link href="#" style={styles.container}>
+        <Link href="" style={styles.container}>
             <TouchableOpacity style={styles.button}>
                 <Text style={styles.buttonText}>{text}</Text>
             </TouchableOpacity>
