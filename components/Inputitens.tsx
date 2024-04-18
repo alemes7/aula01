@@ -19,7 +19,7 @@ export default function InventoryInput({label, ...props}: InventoryInputProps) {
             position: 'absolute',
             top: 6, 
             left: 10,
-            backgroundColor: '#fff',
+            backgroundColor: '#F5F5F5',
             paddingHorizontal: 2,
             fontWeight: 'bold',
             color: hover,
