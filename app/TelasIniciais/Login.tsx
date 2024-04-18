@@ -29,7 +29,7 @@ function Login() {
       marginTop: 10,
       marginHorizontal: 20,
     },
-  
+
     button: {
       color: '#011E83',
       fontSize: 14,
