@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import Header from '../../components/Header';
-import Botao from '../../components/Botao';
-import Inputs from '../../components/Inputs';
+import Header from '../../components/Inputitens';
+import Botao from '../../components/Footer';
+import Inputs from '../../components/Linkbtn';
 
 function Cadastro() {
     const styles = StyleSheet.create({

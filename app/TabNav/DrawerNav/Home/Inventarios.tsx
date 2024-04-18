@@ -3,9 +3,9 @@ import { View,  ScrollView, StyleSheet } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
-import Navbar from '../../../../components/Navbar';
-import BlocoCad from '../../../../components/BlocoCad';
-import BottomNav from '../../../../components/BottomNav';
+import Navbar from '../../../../components/PatrimonioBar';
+import BlocoCad from '../../../../components/Button';
+import BottomNav from '../../../../components/Input';
 
 function Adicionar() {
     alert("Adicionar");

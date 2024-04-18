@@ -1,39 +1,28 @@
-import { Link } from "expo-router"
-import { LinkProps } from "next/link"
-import { Text,TouchableOpacity,StyleSheet, View } from "react-native"
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
 
-
-interface LinkBtnProps extends LinkProps{
-    text: string
-}
-
-export default function LinkBtn({text, ...props}: LinkBtnProps){
+export default function Bottom(){
     const styles = StyleSheet.create({
-        container: {
-            alignItems: 'center',
-            marginTop: 20,
-        },
-    
-        button: {
-            backgroundColor: 'black',
-            padding: 10,
-            borderRadius: 5,
-            width: '90%',
-        },
-    
-        buttonText: {
-            color: 'white',
-            textAlign: 'center',
-            fontSize: 18,
+        display: {
+            position: "absolute",
+            bottom: 0,
+            height: 60,
+            width: "90%",
+            flexDirection: "row",
+            justifyContent: "center",
+            gap: 20,
+            alignItems: "center",
+            backgroundColor: "#ff0000",
         },
     });
 
     return (
-        <Link href="" style={styles.container}>
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>{text}</Text>
-            </TouchableOpacity>
-        </Link>
+        <View>
+            <View style={styles.display}>
+                <FontAwesome5 name="list-ol" size={24} color="#ffffff" />
+                <FontAwesome6 name="camera-rotate" size={24} color="#ffffff" />
+            </View>
+        </View>
     );
-}
-
+};

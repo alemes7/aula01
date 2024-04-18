@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-import Navbar from '../components/Navbar';
-import BottomNav from '../components/BottomNav';
-import InputLabel from '../components/Input_Label';
+import Navbar from '../components/PatrimonioBar';
+import BottomNav from '../components/Input';
+import InputLabel from '../components/Itens';
 
 function Editar() {
   const styles = StyleSheet.create({

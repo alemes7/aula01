@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import Header from '../../components/Header';
-import Botao from '../../components/Botao';
-import Inputs from '../../components/Inputs';
+import Header from '../../components/Inputitens';
+import Botao from '../../components/Footer';
+import Inputs from '../../components/Linkbtn';
 import { Link } from 'expo-router';
-import LinkBtn from '../../components/Botao';
+import LinkBtn from '../../components/Footer';
 import { useColor } from '../../temas/Temas';
 
 const cores = useColor();
