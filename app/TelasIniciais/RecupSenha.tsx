@@ -1,9 +1,8 @@
 import { View, StyleSheet, Text } from 'react-native';
-import Status from '@components/StatusBar';
-import Inputs from '@components/Input';
-import Botao from '@components/Button';
-import { Link } from 'expo-router';
+import Status from '@comp/StatusBar';
+import Inputs from '@comp/Input';
 import { useColor } from '../../temas/temas';
+import LinkBtn from '@comp/Linkbtn';
 
 const RecupSenha = () => {
     const BotaoPress = () => {
@@ -13,24 +12,22 @@ const RecupSenha = () => {
     const cores = useColor();
 
     console.log(cores);
-    
-    return (
-        <View style={[styles.container, {backgroundColor: cores.bginfo}]}>
-    
-            <Status title="Recuperação de senha" />
-    
-            <View style={[styles.cadastro, {backgroundColor: cores.bgPrimary}]}>
 
-                <Text style={[styles.texto, {color: cores.textColorPrimary}]}>Insira seu e-mail para recuperar a senha!</Text>
-                
-                <Inputs placeholder="insira seu email:" title="E-mail:"/>
-                
-                <Link href="//index" asChild>
-                    <Botao label="Cadastre-se" onPress={BotaoPress} />
-                </Link>
-        
+    return (
+        <View style={[styles.container, { backgroundColor: cores.bgSecondary }]}>
+
+            <Status title="Recuperação de senha" />
+
+            <View style={[styles.cadastro, { backgroundColor: cores.bgPrimary }]}>
+
+                <Text style={[styles.texto, { color: cores.textColorPrimary }]}>Insira seu e-mail para recuperar a senha!</Text>
+
+                <Inputs placeholder="insira seu email:" title="E-mail:" />
+
+                <LinkBtn title="Entrar" href="TelasIniciais/Login" />
+
             </View>
-    
+
         </View>
     );
 };

@@ -1,6 +1,5 @@
 import { Drawer } from "expo-router/drawer";
-import { View } from "react-native"
-import CustomDrawer from "@components/customDrawer";
+import CustomDrawer from "@comp/customDrawer";
 import { MaterialIcons } from "@expo/vector-icons";
 
 export default function Layout() {

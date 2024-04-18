@@ -1,44 +1,40 @@
-import { Link } from "expo-router";
-import React from "react";
-import {Text, View, StyleSheet } from "react-native";
+import { Link } from "expo-router"
+import { LinkProps } from "next/link"
+import { Text,TouchableOpacity,StyleSheet,} from "react-native"
+import { useColor } from "../temas/temas"
 
-type Props = {
-    id: number,
-    item: string,
-};
 
-export default function Itens({id, item }: Props){
+interface LinkBtnProps extends LinkProps{
+    title: string
+}
+
+export default function LinkBtn({title, ...props}: LinkBtnProps){
+    const cores = useColor();
+
+
     const styles = StyleSheet.create({
-        display: {
-            borderBottomColor: '#f5f5f5',
-            borderBottomWidth: 2,
-            gap: 10,
+        button: {
+            backgroundColor: cores.bgButton,
+            padding: 10,
+            borderRadius: 5,
+            width: 350,
+            marginTop: 10,
         },
-        text : {
-            fontSize: 20,
-            fontWeight: '500',
-            color: 'black',
-            alignContent: 'center',
-            marginLeft: 25,
-            marginTop: 20,
-            
-            
-        },
-        item: {
-            fontSize: 15,
-            fontWeight: '500',
-            color: 'lightgray',
-            alignContent: 'center',
-            marginLeft: 25,
-            marginBottom: 20,
-        },
-    });
+
+        title: {
+            color: "#FFFFFF",
+            textAlign: 'center',
+            fontSize: 16,
+        }
+    })
+
     return(
-        <View style={styles.display}>
-            <Link href="/DescricaoIten" asChild>
-                <Text style={styles.text}>{id}</Text>
-            </Link>
-                <Text style={styles.item}>{item}</Text>
-        </View>
-    );
-};
+
+        <Link {...props} asChild>
+            <TouchableOpacity style={styles.button}>
+                <Text style={styles.title}>{title}</Text>
+            </TouchableOpacity>
+        </Link>
+        
+    )
+}

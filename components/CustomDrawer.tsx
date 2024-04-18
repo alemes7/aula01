@@ -8,4 +8,4 @@ export default function CustomDrawer(props: any){
             <DrawerItemList {...props} />
         </View>
     )
-}
+} 
