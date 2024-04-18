@@ -1,40 +1,40 @@
 import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text} from "react-native";
 import PatriBar from "@components/PatrimonioBar";
-import {AntDesign, MaterialIcons } from '@expo/vector-icons';
+import {AntDesign } from '@expo/vector-icons';
 import Footbar from "@components/Footer";
 import InputinventoryInput from "@components/Inputitens";
 import { Link } from "expo-router";
 
-const Editar = () => {
+const AddIten = () => {
     return(
         <View style={styles.container}>
 
             <PatriBar color="red">
                 <TouchableOpacity>
-                    <Link href="/DescricaoIten" asChild>
-                        <AntDesign name="arrowleft" size={25} color="#ffff" />
+                    <Link href="/Patrimonio" asChild>
+                        <AntDesign name="arrowleft" size={24} color="#ffff" />
                     </Link>
                 </TouchableOpacity>
-                    <Text style={styles.text}>Editar</Text>
+                    <Text style={styles.text}>Cadastro de itens</Text>
                 <TouchableOpacity>
-                    <MaterialIcons name="check-circle" size={25} color="#ffff" />
+                    <AntDesign name="pluscircleo" size={24} color="#ffff" />
                 </TouchableOpacity>
             </PatriBar>
 
             <View style={styles.inputContainer}>
 
-            <InputinventoryInput label="N° Inventario" placeholder="957689"/>
+            <InputinventoryInput label="N° Inventario"/>
 
-            <InputinventoryInput label="Descrição" placeholder="CADEIRA GIRATÓRIA"/>
+            <InputinventoryInput label="Descrição"/>
 
-            <InputinventoryInput label="Local" placeholder="SALA C13"/>
+            <InputinventoryInput label="Local"/>
 
-            <InputinventoryInput label="Responsável" placeholder="CARLOS"/>
+            <InputinventoryInput label="Responsável"/>
 
-            <InputinventoryInput label="Data de registro" placeholder="05/03/2024"/>
+            <InputinventoryInput label="Data de registro"/>
 
-            </View>
+            </View>  
 
             <Footbar color="white" ColorIcon="#595959" margem={1} />
 
@@ -49,12 +49,20 @@ const styles = StyleSheet.create({
     text: {
         color: "#ffff",
         fontSize: 16,
+
     },
     inputContainer: {
         flex: 1,
         marginTop: 50,
-
+    },
+    addButtonContainer: {
+        position: "absolute",
+        bottom: 20,
+        right: 0,
+        margin: 20,
+        marginBottom: 50,
+        height: 60,
     },
 });
 
-export default Editar;
+export default AddIten;

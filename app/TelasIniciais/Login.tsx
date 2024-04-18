@@ -1,65 +1,61 @@
 import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-import Header from '../../components/Inputitens';
-import Botao from '../../components/Footer';
-import Inputs from '../../components/Linkbtn';
+import { View, StyleSheet, Text } from 'react-native';
+import Status from '@components/StatusBar';
+import Inputs from '@components/Input';
 import { Link } from 'expo-router';
-import LinkBtn from '../../components/Footer';
-import { useColor } from '../../temas/Temas';
+import LinkBtn from '@components/Linkbtn';
+import { useColor } from '../../temas/temas';
 
-const cores = useColor();
+const Login = () => {
+    const cores = useColor();
 
-function Login() {
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-    },
-    text: {
-      marginBottom: 15,
-      marginTop: 40,
-      fontSize: 18,
-      alignSelf: 'center',
-      textAlign: 'center',
-      width: 320,
-    },
-    buttonContainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginTop: 10,
-      marginHorizontal: 20,
-    },
-
-    button: {
-      color: '#011E83',
-      fontSize: 14,
-    }
-  });
-  
-  return (
-    <>
-      <StatusBar style="dark" backgroundColor='#FF' />
-      <View style={styles.container}>
-        <Header text="Login" color={cores.bgPrimary} />
-        <Text style={styles.text}>Faça Login para Acessar o Sistema!</Text>
-        <Inputs text="Email:" placeholder="Insira seu email:" />
-        <Inputs text="Senha:" placeholder="Insira sua senha:" secureTextEntry/>
-        <LinkBtn text="Entrar" href="drawer"></LinkBtn>
-        <View style={styles.buttonContainer}>
-          <Link href="/Cadastro" asChild>
-            <TouchableOpacity>
-                <Text style={styles.button}>Cadastre-se</Text>
-            </TouchableOpacity>
-          </Link>
-          <Link href="/RecSenha" asChild>
-            <TouchableOpacity>
-                <Text style={styles.button}>Esqueceu a senha?</Text>
-            </TouchableOpacity>
-          </Link>
+    return (
+        <View style={[styles.container, { backgroundColor: cores.bgSecondary }]}>
+            <Status title="Login" />
+            <View style={[styles.cadastro, { backgroundColor: cores.bgPrimary }]}>
+                <Text style={[styles.texto, { color: cores.textColorPrimary }]}>Faça Login para Acessar o Sistema!</Text>
+                <Inputs placeholder="Insira seu email:" title="E-mail:"/>
+                <Inputs placeholder="Insira sua senha:" secureTextEntry title="Senha:" />
+                <LinkBtn title="Entrar" href="TabNav" />
+                <View style={styles.linksContainer}>
+                    <Link href="TelasIniciais/RecupSenha" asChild>
+                        <Text style={[styles.linkText, { color: cores.bginfo }]}>Esqueceu a senha?</Text>
+                    </Link>
+                    <Link href="TelasIniciais/Cadastro" asChild>
+                        <Text style={[styles.linkText, { color: cores.bginfo }]}>Cadastre-se</Text>
+                    </Link>
+                </View>
+            </View>
         </View>
-      </View>
-    </>
-  );
-}
+    );
+};
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    cadastro: {
+        flex: 1,
+        width: '100%',
+        padding: 10,
+        alignItems: 'center',
+    },
+    texto: {
+        textAlign: 'center',
+        fontSize: 20,
+        padding: 20,
+    },
+    linksContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%',
+        padding: 10,
+    },
+    linkText: {
+        fontSize: 15,
+    },
+});
 
 export default Login;
