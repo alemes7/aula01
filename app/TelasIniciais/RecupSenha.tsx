@@ -12,22 +12,15 @@ const RecupSenha = () => {
     const cores = useColor();
 
     console.log(cores);
-
+    
     return (
-        <View style={[styles.container, { backgroundColor: cores.bgSecondary }]}>
-
+        <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
             <Status title="Recuperação de senha" />
-
-            <View style={[styles.cadastro, { backgroundColor: cores.bgPrimary }]}>
-
-                <Text style={[styles.texto, { color: cores.textColorPrimary }]}>Insira seu e-mail para recuperar a senha!</Text>
-
-                <Inputs placeholder="insira seu email:" title="E-mail:" />
-
+            <View style={[styles.cadastro, {backgroundColor: cores.bgPrimary}]}>
+                <Text style={[styles.texto, {color: cores.textColorPrimary}]}>Insira seu e-mail para recuperar a senha!</Text>
+                <Inputs placeholder="insira seu email:" title="E-mail:"/>
                 <LinkBtn title="Entrar" href="TelasIniciais/Login" />
-
             </View>
-
         </View>
     );
 };
