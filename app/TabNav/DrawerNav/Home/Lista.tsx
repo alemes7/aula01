@@ -32,9 +32,6 @@ const Patrimonio = () => {
                     <AntDesign name="pluscircle" size={50} color="red"  />
                 </Link>
             </View>
-
-
-
         </View>
     );
 }
