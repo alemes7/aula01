@@ -14,7 +14,7 @@ export default function layout() {
             <Tabs.Screen name="DrawerNav" options={{
                 headerShown: false,
                 tabBarStyle: {
-                    backgroundColor: 'red',
+                backgroundColor: 'red',
                 },
                 tabBarIcon: ({color, size}) => (
                     <MaterialCommunityIcons name="format-list-numbered" size={size} color={color}/>

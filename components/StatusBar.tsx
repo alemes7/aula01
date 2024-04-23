@@ -11,17 +11,18 @@ export default function Status({ title }: Props) {
         container: {
             alignItems: 'center',
             justifyContent: 'center',
-            padding: 60,
+            marginTop: 40,
+            height: 200,
         },
         image: {
             resizeMode: 'contain',
             width: 200,
-            height: 200,
+            height: 100,
         },
         texto: {
             color: 'white',
             fontSize: 20,
-            padding: 5,
+            
         },
     });
 
