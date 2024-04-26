@@ -9,17 +9,20 @@ type Props = {
 export default function Status ({ title }: Props){
   const styles = StyleSheet.create({
     container: {
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: 60,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 40,
+        height: 200,
     },
     image: {
-      resizeMode: 'contain',
+        resizeMode: 'contain',
+        width: 200,
+        height: 100,
     },
     texto: {
-      color: 'white',
-      fontSize: 20,
-      padding: 5,
+        color: 'white',
+        fontSize: 20,
+        
     },
   });
   

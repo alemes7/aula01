@@ -35,6 +35,5 @@ export default function LinkBtn({title, ...props}: LinkBtnProps){
                 <Text style={styles.title}>{title}</Text>
             </TouchableOpacity>
         </Link>
-        
     )
 }
